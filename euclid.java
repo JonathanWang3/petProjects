@@ -10,14 +10,16 @@ import java.util.Scanner;
 public class euclid
 {
     public static void main(String[] args){
-        int val1, val2, placeholder, remainder;
+        int val1, val2, placeholder, remainder, vp1, vp2;
         Scanner keyboard = new Scanner(System.in);
         
-        System.out.println("Enter 2 numbers: ");
+        System.out.println("Enter a numerator and a denominator: ");
         val1 = keyboard.nextInt();
         val2 = keyboard.nextInt();
-        //System.out.println(val1 + " " + val2);
-        if (val2 >= val1){
+        vp1 = val1; //#kms
+        vp2 = val2;
+        //#System.out.println(val1 + " " + val2);
+        if (val2 <= val1){ //#one alligator mark boi screwed me up
             placeholder = val1;
             val1 = val2;
             val2 = placeholder;
@@ -29,7 +31,7 @@ public class euclid
             }
             val1 = remainder;
         }
-        System.out.println(val1);
+        System.out.println((vp1/val1) + " / " + (vp2/val1));
         //# hello?
         //# bro
     }    
