@@ -25,12 +25,21 @@ public class euclid
             val1 = val2;
             val2 = placeholder;
         }
-        if (val2 == 1 || val1 == 1){
+        
+        while (val1 > 0){
+            placeholder = val1;
+            val1 = val2;
+            val2 = val2%placeholder;
+        } 
+        System.out.println(val1 + " / " + val2);
+        /*#if (val2 == 1 || val1 == 1){
             System.out.println(val1 + " / " + val2);
             bugFix = false;
-        } else{
+        }
+        else{
             bugFix = true;
         }
+        
         while (bugFix){//#val1 % val2 != 0){
             remainder = val1 % val2;
             while (val2 > remainder){
@@ -43,5 +52,7 @@ public class euclid
         }
             //# hello?
         //# bro
+        
+        **/
     }    
 }
